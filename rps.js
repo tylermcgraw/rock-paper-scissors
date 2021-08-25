@@ -58,6 +58,10 @@ function capitalizeFirst(str)
 // Check to see if player selection is valid
 function isValid(selection)
 {
+    if (selection === null)
+    {
+        return false;
+    }
     selection = capitalizeFirst(selection);
     if(selection === ROCK || selection === PAPER || selection === SCISSORS)
     {
