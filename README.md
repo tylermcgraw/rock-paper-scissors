@@ -1,1 +1,1 @@
-Play rock, paper, scissors against the computer using buttons.
+Play multiple rounds of rock, paper, scissors in the console using Javascript
