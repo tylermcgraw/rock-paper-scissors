@@ -5,14 +5,13 @@ const TIE = "Tie! ";
 const PLAYERWIN = "You win! ";
 const PLAYERLOSE = "You lose! ";
 
-let games = parseInt(prompt("How many games would you like to play?"));
-console.log("Games: " + games);
-while(Number.isNaN(games) || games < 1)
-{
-    console.log("Please enter a number greater than 0");
-    games = parseInt(prompt("How many games would you like to play?"));
-}
-game(games);
+window.addEventListener('click', function (e) {
+    console.log(e.target);
+    const button = document.querySelector(`button[id="${e.target.id}"]`);
+    const results = document.getElementById('results');
+    results.textContent = playRound(button.textContent, getComputerSelection());
+});
+
 
 // Player 5 rounds of rock, paper, scissors
 function game(rounds)
